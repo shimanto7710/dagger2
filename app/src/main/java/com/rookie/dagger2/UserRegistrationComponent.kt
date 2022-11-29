@@ -1,13 +1,16 @@
 package com.rookie.dagger2
 
-import dagger.Component
-import javax.inject.Inject
 
-@Component
+import dagger.BindsInstance
+import dagger.Component
+
+
+@Component(modules = [UserRepositoryModule::class, NotificationServiceModule::class])
 interface UserRegistrationComponent {
 //    fun getUserRegistrationService():UserRegistrationService
 
 //    fun getEmailService(): EmailService
 
     fun inject(mainActivity: MainActivity)
+
 }
